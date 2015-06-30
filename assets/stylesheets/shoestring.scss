@@ -1,0 +1,100 @@
+@import "normalize";
+@import "modern-business";
+
+.fa {
+	transform: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+h1 {
+	color: white;
+}
+
+h2 {
+	text-align: center;
+}
+
+$nav-gray: #bbb;
+$nav-height: 50px;
+
+.navbar {
+	background: $nav-gray;
+	height: $nav-height;
+
+	a {
+		color: invert($nav-gray);
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	
+	.navbar-header {
+		margin-top: 16px;
+		float: left;
+	}
+	
+	.navbar-brand {
+		font-weight: bold;
+	}
+	
+	ul.navbar-nav {
+		list-style-type: none;
+	}
+	
+	.navbar-right {
+		margin-top: 16px;
+		float: right;
+	}
+
+	&.navbar-inverse {
+		background: invert($nav-gray);
+		a {
+			color: $nav-gray;
+		}
+	}
+
+	&.navbar-fixed-top {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+}
+
+.container {
+	padding: 0 5%;
+}
+
+.section.lead {
+	padding-top: 0;
+}
+
+.img-responsive {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+@mixin clearfix() {
+	&::before, &::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+.row {
+	@include clearfix();
+}
+
+@for $n from 1 through 12 {
+	.col-lg-#{$n} {
+		float: left;
+		padding: 0 2%;
+		width: percentage($n/12);
+	}
+}
