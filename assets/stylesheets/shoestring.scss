@@ -31,20 +31,20 @@ $nav-height: 50px;
 			text-decoration: underline;
 		}
 	}
-	
+
 	.navbar-header {
 		margin-top: 16px;
 		float: left;
 	}
-	
+
 	.navbar-brand {
 		font-weight: bold;
 	}
-	
+
 	ul.navbar-nav {
 		list-style-type: none;
 	}
-	
+
 	.navbar-right {
 		margin-top: 16px;
 		float: right;
@@ -72,6 +72,7 @@ $nav-height: 50px;
 
 .section.lead {
 	padding-top: 0;
+	padding-bottom: 0;
 }
 
 .img-responsive {
@@ -98,3 +99,5 @@ $nav-height: 50px;
 		width: percentage($n/12);
 	}
 }
+
+@import 'media-queries';
